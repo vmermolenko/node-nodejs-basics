@@ -8,6 +8,8 @@ import { read } from './src/fs/read.js'
 import { parseEnv } from './src/cli/env.js'
 import { parseArgs } from './src/cli/args.js'
 
+import { calculateHash } from './src/hash/calcHash.js'
+
 //File system (src/fs)
 //1 task
 //await create()
@@ -41,3 +43,8 @@ import { parseArgs } from './src/cli/args.js'
 //8 parseArgs
 //await parseArgs()
 //console.log(parseArgs)
+
+
+//8 hash
+await calculateHash()
+//console.log(calculateHash)
