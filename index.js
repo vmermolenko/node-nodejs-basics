@@ -14,6 +14,8 @@ import { read as readStream } from './src/streams/read.js'
 import { write as writeStream } from './src/streams/write.js'
 import { transform as transformStream } from './src/streams/transform.js'
 
+import { compress } from './src/zip/compress.js'
+import { decompress } from './src/zip/decompress.js'
 
 //File system (src/fs)
 //1 create
@@ -45,7 +47,8 @@ import { transform as transformStream } from './src/streams/transform.js'
 //9 hash
 //await calculateHash()
 
-//10 Streams readStream
+//Streams
+//10 readStream
 //await readStream()
 
 //11 Streams writeStream
@@ -53,3 +56,10 @@ import { transform as transformStream } from './src/streams/transform.js'
 
 //12 Streams transformStream
 //await transformStream()
+
+//Zlib (src/zip)
+//13 compress
+//await compress()
+
+//14 decompress
+//await decompress()
