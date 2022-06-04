@@ -10,41 +10,46 @@ import { parseArgs } from './src/cli/args.js'
 
 import { calculateHash } from './src/hash/calcHash.js'
 
-//File system (src/fs)
-//1 task
-//await create()
-//console.log(create)
+import { read as readStream } from './src/streams/read.js'
+import { write as writeStream } from './src/streams/write.js'
+import { transform as transformStream } from './src/streams/transform.js'
 
-//2 task
+
+//File system (src/fs)
+//1 create
+//await create()
+
+//2 copy
 //await copy()
 //console.log(copy)
 
-//3 task
+//3 rename
 //await rename()
-//console.log(rename)
 
 //4 delete
 //await remove()
-//console.log(delete)
 
 //5 list
 //await list()
-//console.log(list)
 
 //6 read
 //await read()
-//console.log(read)
 
 //Command line interface(src/cli)
 //7 parseEnv
 //await parseEnv()
-//console.log(parseEnv)
 
 //8 parseArgs
 //await parseArgs()
-//console.log(parseArgs)
 
+//9 hash
+//await calculateHash()
 
-//8 hash
-await calculateHash()
-//console.log(calculateHash)
+//10 Streams readStream
+//await readStream()
+
+//11 Streams writeStream
+//await writeStream()
+
+//12 Streams transformStream
+//await transformStream()
