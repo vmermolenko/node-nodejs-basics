@@ -17,11 +17,11 @@ import { transform as transformStream } from './src/streams/transform.js'
 import { compress } from './src/zip/compress.js'
 import { decompress } from './src/zip/decompress.js'
 
-import { sendResult } from './src/wt/worker.js'
+import { performCalculations } from './src/wt/main.js'
 
 
 const args = process.argv.slice(2);
-console.log(args[0]);
+
 switch(args[0]) {
   case 'create':
     await create();
@@ -65,7 +65,11 @@ switch(args[0]) {
 	case 'decompress':
 		await decompress();
 		break;
+	case 'worker':
+		await performCalculations();
+		break;
   default:
+		console.log(args[0]);
     break;
 }
 
@@ -115,3 +119,7 @@ switch(args[0]) {
 
 //14 decompress
 //await decompress()
+
+
+//15 Worker
+//await performCalculations()
