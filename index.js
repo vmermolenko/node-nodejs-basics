@@ -19,10 +19,12 @@ import { decompress } from './src/zip/decompress.js'
 
 import { performCalculations } from './src/wt/main.js'
 
+import { spawnChildProcess } from './src/cp/cp.js'
 
-const args = process.argv.slice(2);
 
-switch(args[0]) {
+const command = process.argv.slice(2);
+
+switch(command[0]) {
   case 'create':
     await create();
     break;
@@ -68,8 +70,11 @@ switch(args[0]) {
 	case 'worker':
 		await performCalculations();
 		break;
+	case 'child':
+		await spawnChildProcess();
+		break;
   default:
-		console.log(args[0]);
+		console.log(command[0]);
     break;
 }
 
@@ -123,3 +128,6 @@ switch(args[0]) {
 
 //15 Worker
 //await performCalculations()
+
+//16 Child Processes
+//await spawnChildProcess()

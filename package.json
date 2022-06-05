@@ -20,7 +20,8 @@
     "5StreamsTransformStream": "node index.js transformstream",
     "6ZlibCompress": "node index.js compress",
     "6ZlibDecompress": "node index.js decompress",
-    "7Worker": "node index.js worker"
+    "7Worker": "node index.js worker",
+    "8child": "node index.js child"
   },
   "repository": {
     "type": "git",

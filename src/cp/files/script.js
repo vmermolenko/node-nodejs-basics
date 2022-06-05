@@ -1,7 +1,7 @@
-const arguments = process.argv.slice(2);
+const argScript = process.argv.slice(2);
 
-console.log(`Total number of arguments is ${arguments.length}`);
-console.log(`Arguments: ${JSON.stringify(arguments)}`);
+console.log(`Total number of arguments is ${argScript.length}`);
+console.log(`Arguments: ${JSON.stringify(argScript)}`);
 
 const echoInput = (chunk) => {
     const chunkStringified = chunk.toString();
@@ -9,4 +9,4 @@ const echoInput = (chunk) => {
     process.stdout.write(`Received from master process: ${chunk.toString()}\n`)
 };
 
-process.stdin.on('data', echoInput);
+process.stdin.on('data', echoInput(argScript));
