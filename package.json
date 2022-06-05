@@ -4,7 +4,22 @@
   "description": "This repository is the part of nodejs-assignments https://github.com/vmermolenko/node-nodejs-basics.git",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "1FileSystemCreate": "node index.js create",
+    "1FileSystemCopy": "node index.js copy",
+    "1FileSystemRename": "node index.js rename",
+    "1FileSystemDelete": "node index.js delete",
+    "1FileSystemList": "node index.js list",
+    "1FileSystemRead": "node index.js read",
+    "2CommandLineInterfaceEnv": "node index.js env",
+    "2CommandLineInterfaceArgs": "node index.js args --propName value --prop2Name value2",
+    "3Modules": "node src/modules/cjsToEsm.mjs",   
+    "4Hash": "node index.js hash",
+    "5StreamsReadStream": "node index.js readstream",
+    "5StreamsWriteStream": "node index.js writestream",
+    "5StreamsTransformStream": "node index.js transformstream",
+    "6ZlibCompress": "node index.js compress",
+    "6ZlibDecompress": "node index.js decompress"
   },
   "repository": {
     "type": "git",

@@ -17,6 +17,58 @@ import { transform as transformStream } from './src/streams/transform.js'
 import { compress } from './src/zip/compress.js'
 import { decompress } from './src/zip/decompress.js'
 
+import { sendResult } from './src/wt/worker.js'
+
+
+const args = process.argv.slice(2);
+console.log(args[0]);
+switch(args[0]) {
+  case 'create':
+    await create();
+    break;
+  case 'copy':
+    await copy();
+    break;
+	case 'rename':
+			await rename();
+			break;
+	case 'delete':
+		await remove();
+		break;
+	case 'list':
+		await list();
+		break;
+	case 'read':
+		await read();
+		break;
+	case 'env':
+		parseEnv();
+		break;
+	case 'args':
+		parseArgs();
+		break;
+	case 'hash':
+		await calculateHash();
+		break;
+	case 'readstream':
+		await readStream();
+		break;
+	case 'writestream':
+		await writeStream();
+		break;
+	case 'transformstream':
+		await transformStream();
+		break;
+	case 'compress':
+		await compress();
+		break;
+	case 'decompress':
+		await decompress();
+		break;
+  default:
+    break;
+}
+
 //File system (src/fs)
 //1 create
 //await create()
